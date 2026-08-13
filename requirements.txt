@@ -1,0 +1,17 @@
+#Utilities
+numpy #array
+pandas #tabular str
+scikit-learn # svm face classification
+
+
+dlib-bin==20.0.1 
+
+#model to recognize face structure 
+git+https://github.com/ageitgey/face_recognition_models
+setuptools<70.0.0
+
+supabase
+bcrypt
+
+segno
+pillow
