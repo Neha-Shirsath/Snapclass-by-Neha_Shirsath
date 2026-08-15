@@ -6,7 +6,7 @@ def header_home():
     logo_url = "https://i.ibb.co/YTYGn5qV/logo.png"
     st.markdown(f"""
 
-        <div style="display:flex; flex-direction:column; justify-content:center; align-items:center; margin-bottom:10px; margin-top:10px">
+        <div style="display:flex; flex-direction:column; justify-content:center; align-items:center; margin-bottom:6px; margin-top:10px">
             <img src="{logo_url}" style='height:90px'; />
             <h1 style='text-align:center; color:#E0E3FF'>SNAP<br/>  CLASS</h1>
         </div>
