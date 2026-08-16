@@ -26,6 +26,13 @@ def style_background_dashboard():
                 .stApp{
                     background: #E0E3FF !important;
                 }
+                .teacher-text{
+                    color: #5865F2 !important;
+                    text-align: left !important;
+                }
+                .logo-img{
+                   margin-right: 8px !important;
+                }
         </style>
 
         """, unsafe_allow_html=True)
@@ -59,6 +66,7 @@ def style_base_layout():
             h2 {
                 font-family: 'Climate Crisis', sans-serif !important;
                 font-size: 2rem !important;
+                font-weight: 400 !important;
                 color: black !important;
                 line-height: 0.9 !important;
                 margin-bottom: 0rem !important;
