@@ -3,7 +3,7 @@
 
 *.pyc
 .DS_Store
-__pyache__/
+__pycache__/
 
 venv/
 
