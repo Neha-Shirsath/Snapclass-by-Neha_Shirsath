@@ -250,7 +250,6 @@ def teacher_tab_attendance_records():
     df = pd.DataFrame(data)
 
 
-
     summary = (
         df.groupby(['ts_group', 'Time', 'Subject', 'Subject Code'])
         .agg(
@@ -284,8 +283,8 @@ def login_teacher(username, password):
         st.session_state.is_logged_in = True
         return True
     
-
     return False
+
 def teacher_screen_login():
     c1, c2 = st.columns(2, vertical_alignment='center', gap='xxlarge')
     with c1:

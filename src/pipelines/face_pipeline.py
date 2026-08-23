@@ -35,13 +35,18 @@ def get_face_embeddings(image_np):
         encodings.append(np.array(face_descriptor))
     return encodings
 
+
+@st.cache_data
+def get_students():
+    return get_all_students()
+
 @st.cache_resource
 def get_trained_model():
     X = []
     y = []
 
 
-    student_db = get_all_students()
+    student_db = get_students()
 
     if not student_db:
         return None
@@ -55,7 +60,7 @@ def get_trained_model():
     if len(X) ==0:
         return 0
     
-    clf = SVC(kernel='linear', probability=True, class_weight='balanced')
+    clf = SVC(kernel='linear', class_weight='balanced')
 
     try:
         clf.fit(X, y)
@@ -66,7 +71,7 @@ def get_trained_model():
 
 
 def train_classifier():
-    st.cache_resource.clear()
+    get_trained_model.clear()
     model_data = get_trained_model()
     return bool(model_data)
 
